@@ -1,0 +1,1228 @@
+{
+  "source": "batuhanmtl/job_resume_fit",
+  "datasetRows": 2385,
+  "profiles": {
+    "ACCOUNTANT": {
+      "requiredSkills": [
+        "ASC 740 income tax accounting",
+        "Excel",
+        "analytical skills",
+        "attention to detail",
+        "business transaction tax analysis",
+        "communication skills",
+        "corporate taxation",
+        "deferred taxes",
+        "federal tax laws",
+        "financial statement tax aspects",
+        "independent work",
+        "international tax",
+        "local tax laws",
+        "mentoring",
+        "multi-state taxation",
+        "organizational skills",
+        "state tax laws",
+        "tax advisory",
+        "tax audits",
+        "tax compliance",
+        "tax compliance calendar management",
+        "tax controversy resolution",
+        "tax documentation",
+        "tax planning",
+        "tax provision calculations",
+        "tax research",
+        "tax return preparation",
+        "tax software",
+        "teamwork",
+        "time management",
+        "transfer pricing",
+        "uncertain tax positions"
+      ],
+      "samples": 118,
+      "scorePoints": [
+        {
+          "coverage": 0.06,
+          "score": 33.41,
+          "samples": 94
+        },
+        {
+          "coverage": 0.14,
+          "score": 33.49,
+          "samples": 24
+        }
+      ]
+    },
+    "ADVOCATE": {
+      "requiredSkills": [
+        "advocacy skills",
+        "alternative dispute resolution",
+        "analytical skills",
+        "appellate advocacy",
+        "business acumen",
+        "case strategy development",
+        "civil procedure",
+        "client management",
+        "client relationship building",
+        "collaboration",
+        "commercial law",
+        "courtroom skills",
+        "depositions",
+        "document review",
+        "drafting pleadings and motions",
+        "electronic discovery",
+        "employment law",
+        "independent work",
+        "industry-specific regulations",
+        "interpersonal skills",
+        "leadership",
+        "legal research",
+        "legal writing",
+        "litigation",
+        "negotiation",
+        "oral communication",
+        "professional ethics",
+        "rules of evidence",
+        "strategic thinking",
+        "stress management",
+        "supervising junior attorneys",
+        "time management",
+        "trial advocacy"
+      ],
+      "samples": 117,
+      "scorePoints": [
+        {
+          "coverage": 0.04,
+          "score": 26.16,
+          "samples": 111
+        },
+        {
+          "coverage": 0.13,
+          "score": 36.51,
+          "samples": 6
+        }
+      ]
+    },
+    "AGRICULTURE": {
+      "requiredSkills": [
+        "GPS guidance systems",
+        "agricultural regulations",
+        "agricultural technology",
+        "animal welfare standards",
+        "biodiversity enhancement",
+        "budgeting",
+        "business acumen",
+        "commodity knowledge",
+        "communication",
+        "cost accounting",
+        "cover cropping",
+        "crop production",
+        "crop rotation",
+        "data analytics",
+        "decision making",
+        "driver's license",
+        "environmental compliance",
+        "farm equipment operation",
+        "farm management software",
+        "financial analysis",
+        "flexibility",
+        "food safety",
+        "grading",
+        "integrated pest management",
+        "labor laws",
+        "leadership",
+        "livestock management",
+        "management",
+        "motivation",
+        "nutrient management",
+        "organic farming",
+        "packaging",
+        "personnel management",
+        "pesticide application",
+        "precision agriculture",
+        "preventive maintenance",
+        "problem solving",
+        "production planning",
+        "profit optimization",
+        "quality control",
+        "regenerative agriculture",
+        "renewable energy utilization",
+        "resource allocation",
+        "soil management practices",
+        "soil science",
+        "storage and distribution",
+        "supervision",
+        "sustainable farming practices",
+        "time management",
+        "training",
+        "veterinary care coordination",
+        "water conservation"
+      ],
+      "samples": 63,
+      "scorePoints": [
+        {
+          "coverage": 0.06,
+          "score": 19.65,
+          "samples": 59
+        }
+      ]
+    },
+    "ARTS": {
+      "requiredSkills": [
+        "aesthetic sensibility",
+        "art handling",
+        "art market knowledge",
+        "artist relations",
+        "budgeting",
+        "collection management",
+        "commitment to diversity",
+        "communication",
+        "curation",
+        "digital marketing",
+        "exhibition planning",
+        "financial management",
+        "flexibility",
+        "gallery management",
+        "installation design",
+        "inventory management",
+        "leadership",
+        "marketing",
+        "negotiation",
+        "networking",
+        "passion for art",
+        "professional development",
+        "project management",
+        "public programming",
+        "relationship building",
+        "sales",
+        "social media management",
+        "team management",
+        "writing"
+      ],
+      "samples": 103,
+      "scorePoints": [
+        {
+          "coverage": 0.05,
+          "score": 28.07,
+          "samples": 55
+        },
+        {
+          "coverage": 0.13,
+          "score": 37.57,
+          "samples": 46
+        }
+      ]
+    },
+    "AUTOMOBILE": {
+      "requiredSkills": [
+        "ASE Master Technician certification",
+        "OSHA regulations",
+        "automotive business practices",
+        "automotive diagnostic software",
+        "automotive safety standards",
+        "automotive systems",
+        "budgeting",
+        "coaching",
+        "communication",
+        "computer applications",
+        "conflict resolution",
+        "cost control",
+        "customer relationship management",
+        "customer service",
+        "dealer management systems",
+        "diagnostic procedures",
+        "environmental compliance",
+        "financial management",
+        "flexibility",
+        "labor time standards",
+        "leadership",
+        "manufacturer service requirements",
+        "organizational skills",
+        "parts inventory management",
+        "parts pricing",
+        "problem solving",
+        "profit optimization",
+        "repair techniques",
+        "service department operations",
+        "service equipment maintenance",
+        "service pricing strategies",
+        "team management",
+        "technical diagnosis",
+        "time management",
+        "warranty administration",
+        "workflow management"
+      ],
+      "samples": 36,
+      "scorePoints": [
+        {
+          "coverage": 0.07,
+          "score": 18.56,
+          "samples": 14
+        },
+        {
+          "coverage": 0.13,
+          "score": 29.79,
+          "samples": 22
+        }
+      ]
+    },
+    "AVIATION": {
+      "requiredSkills": [
+        "FAA Airframe and Powerplant (A&P) certificate",
+        "FAA audits",
+        "FAA regulations",
+        "Inspection Authorization (IA)",
+        "aircraft maintenance",
+        "aircraft maintenance software",
+        "airworthiness standards",
+        "budget management",
+        "communication",
+        "continuous improvement",
+        "decision making",
+        "flexibility",
+        "inventory management",
+        "leadership",
+        "logbook entries",
+        "maintenance documentation",
+        "maintenance human factors",
+        "maintenance planning",
+        "maintenance programs",
+        "maintenance tracking systems",
+        "motivation",
+        "personnel management",
+        "problem solving",
+        "quality assurance",
+        "regulatory compliance",
+        "root cause analysis",
+        "safety management systems (SMS)",
+        "safety risk assessment",
+        "team building",
+        "technical publications management",
+        "training coordination",
+        "troubleshooting techniques",
+        "vendor management"
+      ],
+      "samples": 116,
+      "scorePoints": [
+        {
+          "coverage": 0.07,
+          "score": 32.2,
+          "samples": 71
+        },
+        {
+          "coverage": 0.13,
+          "score": 46.48,
+          "samples": 42
+        }
+      ]
+    },
+    "BANKING": {
+      "requiredSkills": [
+        "banking platforms",
+        "business development",
+        "client relationship management",
+        "client service",
+        "collaboration",
+        "commercial banking",
+        "commercial loan products",
+        "communication",
+        "credit agreement covenants",
+        "credit analysis",
+        "credit underwriting",
+        "financial analysis",
+        "financial statement interpretation",
+        "flexibility",
+        "loan documentation",
+        "loan origination systems",
+        "loan structuring",
+        "negotiation",
+        "networking",
+        "organizational skills",
+        "portfolio management",
+        "presentation",
+        "presentation skills",
+        "problem solving",
+        "regulatory compliance",
+        "relationship building",
+        "risk assessment",
+        "strategic advising",
+        "treasury management",
+        "wealth management"
+      ],
+      "samples": 115,
+      "scorePoints": [
+        {
+          "coverage": 0.06,
+          "score": 40.49,
+          "samples": 31
+        },
+        {
+          "coverage": 0.12,
+          "score": 52.1,
+          "samples": 75
+        },
+        {
+          "coverage": 0.21,
+          "score": 66.36,
+          "samples": 8
+        }
+      ]
+    },
+    "BPO": {
+      "requiredSkills": [
+        "BPO operations",
+        "Microsoft Excel",
+        "analytical skills",
+        "attention to detail",
+        "business intelligence tools",
+        "calibration methodologies",
+        "call and chat evaluations",
+        "coaching",
+        "collaboration",
+        "communication skills",
+        "compliance management",
+        "customer service principles",
+        "data analysis",
+        "flexibility",
+        "multiple communication channels",
+        "organizational skills",
+        "performance management",
+        "problem solving",
+        "quality KPIs monitoring",
+        "quality assurance",
+        "quality frameworks",
+        "quality management certification",
+        "quality monitoring tools",
+        "reporting software",
+        "root cause analysis",
+        "team leadership",
+        "time management",
+        "workforce management platforms"
+      ],
+      "samples": 22,
+      "scorePoints": [
+        {
+          "coverage": 0.06,
+          "score": 42.98,
+          "samples": 6
+        },
+        {
+          "coverage": 0.14,
+          "score": 54.03,
+          "samples": 14
+        }
+      ]
+    },
+    "BUSINESS-DEVELOPMENT": {
+      "requiredSkills": [
+        "CRM systems",
+        "account management",
+        "business development",
+        "business intelligence tools",
+        "collaboration",
+        "communication",
+        "competitive analysis",
+        "contract negotiation",
+        "deal closing",
+        "financial acumen",
+        "go-to-market strategy",
+        "influence",
+        "leadership",
+        "market research",
+        "mentoring",
+        "networking",
+        "partnership management",
+        "pipeline management",
+        "presentation skills",
+        "pricing strategies",
+        "problem solving",
+        "proposal development",
+        "relationship building",
+        "resilience",
+        "sales",
+        "sales forecasting",
+        "strategic planning",
+        "strategic thinking",
+        "team management",
+        "work ethic"
+      ],
+      "samples": 120,
+      "scorePoints": [
+        {
+          "coverage": 0.05,
+          "score": 55.38,
+          "samples": 13
+        },
+        {
+          "coverage": 0.14,
+          "score": 66.34,
+          "samples": 47
+        },
+        {
+          "coverage": 0.23,
+          "score": 72.81,
+          "samples": 45
+        },
+        {
+          "coverage": 0.31,
+          "score": 78.55,
+          "samples": 15
+        }
+      ]
+    },
+    "CHEF": {
+      "requiredSkills": [
+        "HACCP principles",
+        "ServSafe Manager certification",
+        "attention to detail",
+        "budget management",
+        "communication",
+        "cooking techniques",
+        "creativity",
+        "culinary expertise",
+        "dietary requirements knowledge",
+        "flexibility",
+        "food cost management",
+        "food safety regulations",
+        "ingredient sourcing",
+        "inventory control",
+        "kitchen equipment maintenance",
+        "kitchen management software",
+        "kitchen operations management",
+        "leadership",
+        "mentoring",
+        "menu development",
+        "motivation",
+        "organizational skills",
+        "problem solving",
+        "quality control",
+        "recipe creation",
+        "staff training",
+        "team management",
+        "time management"
+      ],
+      "samples": 118,
+      "scorePoints": [
+        {
+          "coverage": 0.05,
+          "score": 58.57,
+          "samples": 17
+        },
+        {
+          "coverage": 0.15,
+          "score": 65.64,
+          "samples": 62
+        },
+        {
+          "coverage": 0.24,
+          "score": 79.31,
+          "samples": 30
+        },
+        {
+          "coverage": 0.33,
+          "score": 87.71,
+          "samples": 9
+        }
+      ]
+    },
+    "CONSTRUCTION": {
+      "requiredSkills": [
+        "CPM scheduling",
+        "Microsoft Project",
+        "OSHA requirements",
+        "PlanGrid",
+        "Primavera P6",
+        "Procore",
+        "budget management",
+        "building codes",
+        "change order management",
+        "client relationship management",
+        "communication",
+        "construction contracts",
+        "construction drawings interpretation",
+        "construction law",
+        "construction management",
+        "construction safety regulations",
+        "contract administration",
+        "cost estimating",
+        "cost forecasting",
+        "decision making",
+        "documentation management",
+        "interpersonal skills",
+        "leadership",
+        "motivation",
+        "organizational skills",
+        "permit coordination",
+        "permitting processes",
+        "problem solving",
+        "procurement",
+        "project management software",
+        "project scheduling",
+        "quality control",
+        "safety program implementation",
+        "shop drawings review",
+        "subcontractor coordination",
+        "team management",
+        "value engineering",
+        "zoning regulations"
+      ],
+      "samples": 112,
+      "scorePoints": [
+        {
+          "coverage": 0.06,
+          "score": 35.68,
+          "samples": 51
+        },
+        {
+          "coverage": 0.13,
+          "score": 55.37,
+          "samples": 57
+        }
+      ]
+    },
+    "CONSULTANT": {
+      "requiredSkills": [
+        "Microsoft Excel",
+        "Microsoft PowerPoint",
+        "ROI projections",
+        "adaptability",
+        "business process design",
+        "business strategy frameworks",
+        "change management",
+        "client relationship building",
+        "communication skills",
+        "consulting methodologies",
+        "continuous learning",
+        "data interpretation",
+        "data visualization tools",
+        "entrepreneurial mindset",
+        "financial analysis",
+        "financial modeling",
+        "governance frameworks",
+        "implementation planning",
+        "intellectual curiosity",
+        "interpersonal skills",
+        "leadership",
+        "mentoring",
+        "operating models",
+        "organizational assessments",
+        "organizational readiness assessments",
+        "organizational structure design",
+        "performance benchmarking",
+        "problem solving",
+        "process improvement methodologies",
+        "project management",
+        "proposal writing",
+        "quantitative analysis",
+        "stakeholder interviews",
+        "strategic thinking",
+        "teamwork",
+        "training program development",
+        "work ethic",
+        "workshop facilitation"
+      ],
+      "samples": 115,
+      "scorePoints": [
+        {
+          "coverage": 0.05,
+          "score": 39.41,
+          "samples": 60
+        },
+        {
+          "coverage": 0.12,
+          "score": 49.9,
+          "samples": 54
+        }
+      ]
+    },
+    "DESIGNER": {
+      "requiredSkills": [
+        "A/B testing",
+        "Adobe Creative Suite",
+        "CSS",
+        "Figma",
+        "HTML",
+        "InVision",
+        "JavaScript",
+        "Principle",
+        "Sketch",
+        "UI design",
+        "UX design",
+        "WCAG",
+        "accessibility standards",
+        "adaptability",
+        "collaboration",
+        "color theory",
+        "communication",
+        "composition",
+        "creativity",
+        "design analytics",
+        "design systems",
+        "design thinking",
+        "front-end development",
+        "human-computer interaction",
+        "mentoring",
+        "presentation",
+        "problem solving",
+        "prototyping",
+        "stakeholder management",
+        "time management",
+        "typography",
+        "usability testing",
+        "user research",
+        "visual design",
+        "wireframing"
+      ],
+      "samples": 107,
+      "scorePoints": [
+        {
+          "coverage": 0.06,
+          "score": 14.94,
+          "samples": 55
+        },
+        {
+          "coverage": 0.14,
+          "score": 24.3,
+          "samples": 43
+        },
+        {
+          "coverage": 0.23,
+          "score": 44.4,
+          "samples": 8
+        }
+      ]
+    },
+    "DIGITAL-MEDIA": {
+      "requiredSkills": [
+        "A/B testing",
+        "SEO",
+        "adaptability",
+        "analytical skills",
+        "attention to detail",
+        "brand management",
+        "collaboration",
+        "communication",
+        "community management",
+        "content calendar management",
+        "content creation",
+        "copywriting",
+        "creativity",
+        "customer service",
+        "data analytics",
+        "graphic design",
+        "hashtag strategies",
+        "influencer marketing",
+        "organizational skills",
+        "photography",
+        "problem solving",
+        "social listening",
+        "social media advertising",
+        "social media advertising tools",
+        "social media algorithms",
+        "social media management tools",
+        "social media platforms",
+        "strategic thinking",
+        "time management",
+        "user-generated content strategies",
+        "video editing",
+        "videography"
+      ],
+      "samples": 96,
+      "scorePoints": [
+        {
+          "coverage": 0.07,
+          "score": 47.69,
+          "samples": 28
+        },
+        {
+          "coverage": 0.15,
+          "score": 49.17,
+          "samples": 51
+        },
+        {
+          "coverage": 0.24,
+          "score": 56.89,
+          "samples": 15
+        }
+      ]
+    },
+    "ENGINEERING": {
+      "requiredSkills": [
+        "ACI",
+        "AISC",
+        "ASCE 7",
+        "AutoCAD",
+        "BIM software",
+        "CAD",
+        "ETABS",
+        "IBC",
+        "LEED requirements",
+        "RAM",
+        "RISA",
+        "Revit",
+        "SAFE",
+        "SAP2000",
+        "budget management",
+        "building codes",
+        "business development",
+        "client communication",
+        "collaboration",
+        "construction administration",
+        "construction methods",
+        "cost estimating",
+        "leadership",
+        "mentoring",
+        "peer review",
+        "presentation skills",
+        "problem solving",
+        "professional engineer license",
+        "project management",
+        "relationship building",
+        "schedule management",
+        "structural analysis",
+        "structural design",
+        "structural engineer license",
+        "structural engineering",
+        "sustainable design",
+        "team management",
+        "technical guidance",
+        "technical report writing",
+        "value engineering"
+      ],
+      "samples": 118,
+      "scorePoints": [
+        {
+          "coverage": 0.05,
+          "score": 16.54,
+          "samples": 72
+        },
+        {
+          "coverage": 0.12,
+          "score": 23.2,
+          "samples": 46
+        }
+      ]
+    },
+    "FINANCE": {
+      "requiredSkills": [
+        "CPA certification",
+        "ERP systems",
+        "Excel",
+        "GAAP",
+        "IPO preparation",
+        "SEC reporting",
+        "SOX compliance",
+        "ability to work under pressure",
+        "accounting operations",
+        "analytical skills",
+        "attention to detail",
+        "audit coordination",
+        "budgeting",
+        "business acumen",
+        "cash flow management",
+        "communication",
+        "compliance management",
+        "financial analysis",
+        "financial modeling",
+        "financial reporting",
+        "financial statements preparation",
+        "forecasting",
+        "internal controls",
+        "leadership",
+        "mentorship",
+        "multi-entity accounting",
+        "presentation skills",
+        "problem solving",
+        "risk management",
+        "statutory reporting",
+        "strategic mindset",
+        "tax accounting",
+        "team management",
+        "transfer pricing"
+      ],
+      "samples": 118,
+      "scorePoints": [
+        {
+          "coverage": 0.07,
+          "score": 40.48,
+          "samples": 39
+        },
+        {
+          "coverage": 0.15,
+          "score": 56.89,
+          "samples": 43
+        },
+        {
+          "coverage": 0.23,
+          "score": 65.63,
+          "samples": 31
+        },
+        {
+          "coverage": 0.33,
+          "score": 81.95,
+          "samples": 5
+        }
+      ]
+    },
+    "FITNESS": {
+      "requiredSkills": [
+        "CPR/AED certification",
+        "accountability",
+        "adaptability",
+        "biomechanics",
+        "body composition analysis",
+        "budget management",
+        "business development",
+        "cardiovascular testing",
+        "client relationship building",
+        "client retention",
+        "communication",
+        "conflict resolution",
+        "corrective exercise",
+        "empathy",
+        "exercise physiology",
+        "first aid",
+        "fitness assessments",
+        "fitness management software",
+        "group fitness instruction",
+        "injury prevention",
+        "leadership",
+        "marketing",
+        "motivation",
+        "movement screening",
+        "nutrition coaching",
+        "nutrition principles",
+        "organizational skills",
+        "passion for health and wellness",
+        "personal training certification",
+        "point-of-sale platforms",
+        "problem solving",
+        "program design",
+        "sales strategies",
+        "special populations knowledge",
+        "sports performance training",
+        "team management",
+        "time management",
+        "training software platforms"
+      ],
+      "samples": 117,
+      "scorePoints": [
+        {
+          "coverage": 0.06,
+          "score": 32.72,
+          "samples": 46
+        },
+        {
+          "coverage": 0.14,
+          "score": 43.59,
+          "samples": 64
+        },
+        {
+          "coverage": 0.23,
+          "score": 58.0,
+          "samples": 7
+        }
+      ]
+    },
+    "HEALTHCARE": {
+      "requiredSkills": [
+        "EKG",
+        "EMTALA compliance",
+        "HIPAA compliance",
+        "IV pumps",
+        "advanced cardiac life support (ACLS)",
+        "basic life support (BLS)",
+        "cardiac monitors",
+        "central line placement",
+        "certified emergency nurse (CEN) credential",
+        "chest tube insertion",
+        "clinical assessment",
+        "commitment to professional development",
+        "communication",
+        "composure under pressure",
+        "critical care interventions",
+        "critical thinking",
+        "defibrillators",
+        "documentation",
+        "electronic medical record systems",
+        "emergency medical equipment",
+        "emergency medications",
+        "emergency nursing pediatric course (ENPC)",
+        "emergency nursing protocols",
+        "flexibility",
+        "infection control standards",
+        "interpersonal skills",
+        "intravenous access",
+        "intubation",
+        "medication administration",
+        "mentoring",
+        "patient assessment",
+        "patient education",
+        "pediatric advanced life support (PALS)",
+        "physical stamina",
+        "problem solving",
+        "professionalism",
+        "registered nurse license",
+        "suturing assistance",
+        "team collaboration",
+        "trauma care",
+        "trauma nursing core course (TNCC)",
+        "ventilators",
+        "wound care"
+      ],
+      "samples": 115,
+      "scorePoints": [
+        {
+          "coverage": 0.06,
+          "score": 18.97,
+          "samples": 107
+        },
+        {
+          "coverage": 0.15,
+          "score": 37.0,
+          "samples": 8
+        }
+      ]
+    },
+    "HR": {
+      "requiredSkills": [
+        "HR analytics",
+        "HRIS systems",
+        "Microsoft Office Suite",
+        "business acumen",
+        "change management",
+        "communication",
+        "compensation and benefits",
+        "confidentiality",
+        "critical thinking",
+        "data analysis",
+        "employee relations",
+        "employment law compliance",
+        "ethical judgment",
+        "human resources management",
+        "influencing",
+        "interpersonal skills",
+        "organizational development",
+        "performance management",
+        "problem solving",
+        "project management",
+        "succession planning",
+        "talent acquisition",
+        "teamwork",
+        "training and development"
+      ],
+      "samples": 110,
+      "scorePoints": [
+        {
+          "coverage": 0.07,
+          "score": 69.8,
+          "samples": 10
+        },
+        {
+          "coverage": 0.14,
+          "score": 74.45,
+          "samples": 41
+        },
+        {
+          "coverage": 0.24,
+          "score": 83.47,
+          "samples": 44
+        },
+        {
+          "coverage": 0.34,
+          "score": 91.75,
+          "samples": 14
+        }
+      ]
+    },
+    "INFORMATION-TECHNOLOGY": {
+      "requiredSkills": [
+        "IT infrastructure management",
+        "IT policies and compliance",
+        "analytical skills",
+        "budget management",
+        "cloud platforms",
+        "collaboration",
+        "communication",
+        "cybersecurity",
+        "database systems",
+        "disaster recovery planning",
+        "infrastructure automation",
+        "leadership",
+        "mentoring",
+        "monitoring tools",
+        "network architecture",
+        "problem solving",
+        "project management",
+        "server management",
+        "strategic thinking",
+        "team management",
+        "technical certifications",
+        "vendor management",
+        "virtualization technologies"
+      ],
+      "samples": 120,
+      "scorePoints": [
+        {
+          "coverage": 0.07,
+          "score": 59.24,
+          "samples": 37
+        },
+        {
+          "coverage": 0.16,
+          "score": 58.85,
+          "samples": 50
+        },
+        {
+          "coverage": 0.24,
+          "score": 72.02,
+          "samples": 30
+        }
+      ]
+    },
+    "PUBLIC-RELATIONS": {
+      "requiredSkills": [
+        "PR campaign development",
+        "communication",
+        "content development",
+        "creativity",
+        "crisis communication",
+        "digital PR",
+        "event coordination",
+        "executive communications",
+        "flexibility",
+        "journalism",
+        "media coaching",
+        "media measurement tools",
+        "media monitoring",
+        "media pitching",
+        "media relations",
+        "presentation skills",
+        "press release writing",
+        "problem solving",
+        "project management",
+        "public relations",
+        "relationship building",
+        "social media strategy",
+        "storytelling",
+        "strategic thinking"
+      ],
+      "samples": 111,
+      "scorePoints": [
+        {
+          "coverage": 0.07,
+          "score": 46.84,
+          "samples": 24
+        },
+        {
+          "coverage": 0.15,
+          "score": 62.24,
+          "samples": 37
+        },
+        {
+          "coverage": 0.24,
+          "score": 73.41,
+          "samples": 39
+        },
+        {
+          "coverage": 0.35,
+          "score": 82.49,
+          "samples": 10
+        }
+      ]
+    },
+    "SALES": {
+      "requiredSkills": [
+        "B2B sales",
+        "CRM (Salesforce)",
+        "account-based marketing",
+        "business acumen",
+        "communication",
+        "consultative selling",
+        "contract management",
+        "enterprise sales",
+        "entrepreneurial mindset",
+        "forecasting",
+        "industry knowledge",
+        "market analysis",
+        "negotiation",
+        "persistence",
+        "presentation skills",
+        "relationship building",
+        "resilience",
+        "sales cycle management",
+        "sales methodologies",
+        "self-motivation",
+        "strategic thinking",
+        "team collaboration",
+        "technical knowledge translation",
+        "time management"
+      ],
+      "samples": 116,
+      "scorePoints": [
+        {
+          "coverage": 0.05,
+          "score": 25.84,
+          "samples": 89
+        },
+        {
+          "coverage": 0.13,
+          "score": 36.53,
+          "samples": 24
+        }
+      ]
+    },
+    "TEACHER": {
+      "requiredSkills": [
+        "English language learners support",
+        "adaptability",
+        "algebra",
+        "assessment design",
+        "calculus",
+        "classroom management",
+        "collaboration",
+        "communication",
+        "critical thinking",
+        "cultural responsiveness",
+        "curriculum development",
+        "data analysis",
+        "differentiated instruction",
+        "educational technology",
+        "equity and inclusion",
+        "geometry",
+        "graphing calculators",
+        "learning management systems",
+        "lesson planning",
+        "mathematical software",
+        "passion for teaching",
+        "pre-calculus",
+        "problem solving",
+        "relationship building",
+        "resilience",
+        "special needs education",
+        "standards-aligned curriculum",
+        "student assessment",
+        "student engagement",
+        "test preparation",
+        "trauma-informed teaching",
+        "trigonometry"
+      ],
+      "samples": 102,
+      "scorePoints": [
+        {
+          "coverage": 0.06,
+          "score": 36.31,
+          "samples": 51
+        },
+        {
+          "coverage": 0.15,
+          "score": 46.38,
+          "samples": 37
+        },
+        {
+          "coverage": 0.25,
+          "score": 62.55,
+          "samples": 13
+        }
+      ]
+    }
+  }
+}

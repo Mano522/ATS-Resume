@@ -16,6 +16,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Tooltip as HelpTooltip } from "@/components/ui/tooltip";
 import { analyzeResume, getDashboardData, mockAnalysis } from "@/lib/api";
+import { calculateRoleFit, datasetRoleCategories, formatRoleCategory } from "@/lib/role-fit";
 const ClientPdfPreview = dynamic(() => import("@/components/pdf-preview").then((module) => module.PdfPreview), { ssr: false });
 const subscribe = () => () => undefined;
 const getClientSnapshot = () => true;
@@ -26,7 +27,7 @@ const navGroups = [
     { title: "YOUR LIBRARY", items: [{ label: "Reports", icon: FileText }, { label: "Analytics", icon: BarChart3 }] },
 ];
 const uploadSteps = ["Reading your resume", "Checking the structure", "Finding the right words", "Building your report"];
-const roles = ["Backend", "Frontend", "Full Stack", "Data Scientist", "ML", "DevOps", "AI"];
+const roles = datasetRoleCategories;
 const initialDashboard = {
     name: "Maya",
     resumes: [
@@ -40,7 +41,6 @@ const initialDashboard = {
     ],
 };
 const colorNames = { grammar: "Grammar & spelling", formatting: "Formatting", keywords: "Missing keywords", improvement: "Improvements" };
-const roleMatches = { Backend: 76, Frontend: 88, "Full Stack": 82, "Data Scientist": 61, ML: 58, DevOps: 70, AI: 64 };
 export function ResumeLensApp() {
     const [view, setView] = useState("Dashboard");
     const [tab, setTab] = useState("Overview");
@@ -58,7 +58,7 @@ export function ResumeLensApp() {
     const [filterColor, setFilterColor] = useState("all");
     const [filterSeverity, setFilterSeverity] = useState("all");
     const [appliedIssues, setAppliedIssues] = useState([]);
-    const [selectedRole, setSelectedRole] = useState("Full Stack");
+    const [selectedRole, setSelectedRole] = useState("INFORMATION-TECHNOLOGY");
     const [showChat, setShowChat] = useState(false);
     const [showMobileMore, setShowMobileMore] = useState(false);
     const [celebrationScore, setCelebrationScore] = useState(null);
@@ -219,9 +219,9 @@ function AtsTab({ analysis }) {
 }
 function PlusIcon() { return _jsx("span", { className: "keyword-chip__plus", children: "+" }); }
 function SkillsTab({ analysis, selectedRole, setSelectedRole }) {
-    var _a;
-    const match = (_a = roleMatches[selectedRole]) !== null && _a !== void 0 ? _a : 82;
-    return _jsxs(_Fragment, { children: [_jsxs("div", { className: "skills-toolbar", children: [_jsxs("div", { children: [_jsx("span", { className: "eyebrow", children: "SKILLS THAT TELL YOUR STORY" }), _jsx("h2", { children: "See where you shine" }), _jsx("p", { children: "Compare your resume with skills common in your target role." })] }), _jsxs("label", { className: "role-select", children: [_jsx("span", { children: "Target role" }), _jsx("select", { value: selectedRole, onChange: (event) => setSelectedRole(event.target.value), children: roles.map((role) => _jsx("option", { children: role }, role)) }), _jsx(ChevronDown, { size: 15 })] })] }), _jsxs("section", { className: "skills-match", children: [_jsx("div", { className: "skills-match__score", children: _jsx(ScoreGauge, { score: match, size: 106, strokeWidth: 9, compact: true }) }), _jsxs("div", { children: [_jsx("span", { className: "eyebrow", children: "YOUR ROLE MATCH" }), _jsxs("h3", { children: [match, "% match for ", selectedRole] }), _jsx("p", { children: "You already have a good foundation. Add a few relevant skills to round out the picture." })] }), _jsxs("span", { className: "skills-match__badge", children: [_jsx(TrendingUp, { size: 15 }), " Strong start"] })] }), _jsxs("div", { className: "skill-columns", children: [_jsx(SkillColumn, { title: "Already in your resume", caption: "Your strengths", kind: "existing", skills: analysis.skills.existing }), _jsx(SkillColumn, { title: "Common in this role", caption: "Add if you have experience", kind: "missing", skills: analysis.skills.missing }), _jsx(SkillColumn, { title: "Worth exploring", caption: "Skills to grow into", kind: "recommended", skills: analysis.skills.recommended })] }), _jsxs("p", { className: "skills-footnote", children: [_jsx(CircleHelp, { size: 14 }), " These suggestions are a guide, not a checklist. Keep the skills that feel true to you."] })] });
+    const fit = calculateRoleFit(analysis.skills.existing, selectedRole);
+    const missingSkills = fit ? fit.missingSkills : [];
+    return _jsxs(_Fragment, { children: [_jsxs("div", { className: "skills-toolbar", children: [_jsxs("div", { children: [_jsx("span", { className: "eyebrow", children: "SKILLS THAT TELL YOUR STORY" }), _jsx("h2", { children: "See where you shine" }), _jsx("p", { children: "Compare your resume with skills in a dataset job category." })] }), _jsxs("label", { className: "role-select", children: [_jsx("span", { children: "Dataset category" }), _jsxs("select", { value: selectedRole, onChange: (event) => setSelectedRole(event.target.value), children: [roles.map((role) => _jsx("option", { value: role, children: formatRoleCategory(role) }, role))] }), _jsx(ChevronDown, { size: 15 })] })] }), _jsxs("section", { className: "skills-match", children: [_jsx("div", { className: "skills-match__score", children: fit ? _jsx(ScoreGauge, { score: fit.score, size: 106, strokeWidth: 9, compact: true }) : _jsx("span", { className: "eyebrow", children: "No dataset profile" }) }), _jsxs("div", { children: [_jsx("span", { className: "eyebrow", children: "DATASET-CALIBRATED FIT" }), _jsxs("h3", { children: [fit ? `${fit.score}% fit for ${formatRoleCategory(selectedRole)}` : "Fit score unavailable"] }), _jsx("p", { children: fit ? `${fit.coverage}% of listed skills match exactly; score calibrated against ${fit.sampleCount} dataset resumes.` : "No fit samples are available for this category." })] }), _jsxs("span", { className: "skills-match__badge", children: [_jsx(TrendingUp, { size: 15 }), " Dataset reference"] })] }), _jsxs("div", { className: "skill-columns", children: [_jsx(SkillColumn, { title: "Already in your resume", caption: "Your strengths", kind: "existing", skills: analysis.skills.existing }), _jsx(SkillColumn, { title: "Common in this category", caption: "Consider if relevant", kind: "missing", skills: missingSkills }), _jsx(SkillColumn, { title: "Worth exploring", caption: "Skills to grow into", kind: "recommended", skills: analysis.skills.recommended })] }), _jsxs("p", { className: "skills-footnote", children: [_jsx(CircleHelp, { size: 14 }), " Reference scores are calibrated against the dataset’s AI match scores. They are a guide, not a hiring decision."] })] });
 }
 function SkillColumn({ title, caption, kind, skills }) {
     return _jsxs("section", { className: `skill-column skill-column--${kind}`, children: [_jsxs("div", { children: [_jsx("span", { className: "skill-column__kicker", children: caption }), _jsx("h3", { children: title }), _jsxs("span", { className: "skill-column__count", children: [skills.length, " skills"] })] }), _jsx("div", { className: "skill-column__chips", children: skills.map((skill) => _jsx(SkillChip, { kind: kind, children: skill }, skill)) })] });
