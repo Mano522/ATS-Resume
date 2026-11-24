@@ -27,6 +27,11 @@ export type AnalysisResult = {
   score: number;
   atsScore: number;
   scoreLabel: string;
+  roleFit?: {
+    score: number;
+    coverage: number;
+    category: string;
+  };
   categories: { subject: string; score: number; fullMark: number }[];
   issues: ResumeIssue[];
   skills: { existing: string[]; missing: string[]; recommended: string[] };
@@ -100,8 +105,45 @@ export async function getDashboardData(): Promise<DashboardData> {
   return dashboard;
 }
 
-export async function analyzeResume(file?: File): Promise<AnalysisResult> {
-  void file;
+export async function analyzeResume(file?: File, category?: string): Promise<AnalysisResult> {
   await wait(800);
-  return mockAnalysis;
+  if (!file || !category) return mockAnalysis;
+
+  let resumeText = "";
+  try {
+    const { pdfjs } = await import("react-pdf");
+    pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+      "pdfjs-dist/build/pdf.worker.min.mjs",
+      import.meta.url,
+    ).toString();
+    const document = await pdfjs.getDocument({ data: new Uint8Array(await file.arrayBuffer()) }).promise;
+    const pages = await Promise.all(
+      Array.from({ length: document.numPages }, (_, index) => document.getPage(index + 1)),
+    );
+    const pageTexts = await Promise.all(
+      pages.map(async (page) => {
+        const content = await page.getTextContent();
+        return content.items
+          .map((item) => ("str" in item ? item.str : ""))
+          .join(" ");
+      }),
+    );
+    resumeText = pageTexts.join(" ");
+  } catch {
+    resumeText = "";
+  }
+
+  const { extractRoleFit, formatRoleCategory } = await import("@/lib/role-fit");
+  const fit = extractRoleFit(resumeText, category);
+
+  return {
+    ...mockAnalysis,
+    roleFit: fit
+      ? {
+          score: fit.score,
+          coverage: fit.coverage,
+          category: formatRoleCategory(category),
+        }
+      : undefined,
+  };
 }

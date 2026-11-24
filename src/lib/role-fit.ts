@@ -63,3 +63,15 @@ export function calculateRoleFit(resumeSkills: string[], category: string) {
     sampleCount: profile.samples,
   };
 }
+
+export function extractRoleFit(resumeText: string, category: string) {
+  const profile = profiles[category];
+  if (!profile) return null;
+
+  const normalizedText = normalizeSkill(resumeText);
+  const resumeSkills = profile.requiredSkills.filter((skill) =>
+    normalizedText.includes(normalizeSkill(skill)),
+  );
+
+  return calculateRoleFit(resumeSkills, category);
+}
