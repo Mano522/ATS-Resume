@@ -1,4 +1,3 @@
-import { mockAnalysis } from "@/lib/api";
 import { datasetRoleCategories, extractRoleFit, formatRoleCategory } from "@/lib/role-fit";
 
 const MAX_TEXT_LENGTH = 120_000;
@@ -54,6 +53,18 @@ export async function POST(request: Request) {
   const score = Math.round(sectionScore * 0.35 + lengthScore * 0.25 + experienceScore * 0.2 + skillScore * 0.2);
   const atsScore = Math.round(sectionScore * 0.5 + lengthScore * 0.3 + (hasMetrics ? 85 : 65) * 0.2);
   const scoreLabel = score >= 85 ? "Excellent" : score >= 70 ? "Good" : score >= 55 ? "Getting started" : "Needs attention";
+  const issues = [{
+    id: "analysis-impact",
+    color: "improvement" as const,
+    severity: hasMetrics ? "Low" as const : "Medium" as const,
+    section: "Work experience",
+    original: hasMetrics ? "Numerical outcomes detected" : "No clear measurable outcome detected",
+    issue: hasMetrics ? "Add context to measurable outcomes" : "Show the impact of your work",
+    reason: "Specific outcomes help readers understand the scale of your contributions.",
+    suggestion: hasMetrics
+      ? "Check that each number explains what changed and who benefited."
+      : "Where you can support it, add a measurable result to a relevant bullet.",
+  }];
   return Response.json({
     score,
     atsScore,
@@ -65,9 +76,8 @@ export async function POST(request: Request) {
       { subject: "Projects", score: /\b(project|built|launched|created)\b/i.test(text) ? 78 : 45, fullMark: 100 },
       { subject: "Skills", score: skillScore, fullMark: 100 },
     ],
-    // Keep the four demonstration issue cards expected by the current analysis UI.
-    issues: mockAnalysis.issues,
-    skills: { existing: fit?.matchedSkills ?? [], missing: fit?.missingSkills ?? [], recommended: mockAnalysis.skills.recommended },
+    issues,
+    skills: { existing: fit?.matchedSkills ?? [], missing: fit?.missingSkills ?? [], recommended: [] },
     sections,
     atsChecks: [
       { name: "Length", passed: wordCount >= 250 && wordCount <= 1000, detail: `${wordCount} words${wordCount >= 250 && wordCount <= 1000 ? " · within a typical range" : " · consider reviewing the length"}` },

@@ -18,7 +18,7 @@ The app uses Next.js Route Handlers for its backend:
 - `GET /api/dashboard` returns the dashboard response shape. Its current records are sample data in `src/lib/api.ts`.
 - `POST /api/analyze` accepts `{ "resumeText": "...", "category": "INFORMATION-TECHNOLOGY" }` and returns the analysis response shape. It checks common resume sections and length, and computes role fit from the included dataset profiles. Resume text is processed for the request and is not stored.
 
-The analysis uses transparent heuristics and dataset reference scores; it does not call an AI service. The current auth form is still a front-end demo and does not create accounts or persist credentials. The client functions in [`src/lib/api.ts`](src/lib/api.ts) keep the response types stable for the UI.
+The analysis uses transparent heuristics and dataset reference scores; it does not call an AI service. Uploaded resumes receive one rules-based suggestion about measurable outcomes; the demo dashboard and its example reports remain sample data. The current auth form is still a front-end demo and does not create accounts or persist credentials. The client functions in [`src/lib/api.ts`](src/lib/api.ts) keep the response types stable for the UI.
 
 ## Dataset-backed role fit
 

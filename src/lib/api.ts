@@ -105,7 +105,7 @@ export async function getDashboardData(): Promise<DashboardData> {
 }
 
 export async function analyzeResume(file?: File, category?: string): Promise<AnalysisResult> {
-  if (!file || !category) return mockAnalysis;
+  if (!file || !category) throw new Error("Choose a PDF and role category before starting analysis.");
 
   let resumeText = "";
   try {
@@ -136,7 +136,7 @@ export async function analyzeResume(file?: File, category?: string): Promise<Ana
   const response = await fetch("/api/analyze", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ resumeText, category, fileName: file.name }),
+    body: JSON.stringify({ resumeText, category }),
   });
   if (!response.ok) {
     const body = await response.json().catch(() => null);
