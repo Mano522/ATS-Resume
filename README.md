@@ -11,9 +11,14 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000). The dashboard is the default screen; `/welcome` and `/auth` contain the public landing and account flows.
 
-## Mock API
+## Backend API
 
-Typed request and response models and mock functions live in [`src/lib/api.ts`](src/lib/api.ts). `getDashboardData()` and `analyzeResume(file)` are the boundary to replace with calls to the Express API. Keep their return types stable to avoid changing the screen components. The current auth form is a front-end demo and does not create an account or persist credentials.
+The app uses Next.js Route Handlers for its backend:
+
+- `GET /api/dashboard` returns the dashboard response shape. Its current records are sample data in `src/lib/api.ts`.
+- `POST /api/analyze` accepts `{ "resumeText": "...", "category": "INFORMATION-TECHNOLOGY" }` and returns the analysis response shape. It checks common resume sections and length, and computes role fit from the included dataset profiles. Resume text is processed for the request and is not stored.
+
+The analysis uses transparent heuristics and dataset reference scores; it does not call an AI service. The current auth form is still a front-end demo and does not create accounts or persist credentials. The client functions in [`src/lib/api.ts`](src/lib/api.ts) keep the response types stable for the UI.
 
 ## Dataset-backed role fit
 

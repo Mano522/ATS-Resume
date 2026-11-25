@@ -45,7 +45,7 @@ export type DashboardData = {
   weeklyScores: { day: string; score: number; ats: number }[];
 };
 
-const dashboard: DashboardData = {
+export const demoDashboard: DashboardData = {
   name: "Maya",
   resumes: [
     { id: "maya-swe", name: "Maya_Patel_Resume.pdf", role: "Senior Software Engineer", updatedAt: "Today", score: 78, atsScore: 84, color: "mint", history: [61, 66, 64, 72, 78] },
@@ -98,15 +98,13 @@ export const mockAnalysis: AnalysisResult = {
   ],
 };
 
-const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
 export async function getDashboardData(): Promise<DashboardData> {
-  await wait(180);
-  return dashboard;
+  const response = await fetch("/api/dashboard", { cache: "no-store" });
+  if (!response.ok) throw new Error("Unable to load dashboard data.");
+  return response.json() as Promise<DashboardData>;
 }
 
 export async function analyzeResume(file?: File, category?: string): Promise<AnalysisResult> {
-  await wait(800);
   if (!file || !category) return mockAnalysis;
 
   let resumeText = "";
@@ -133,17 +131,16 @@ export async function analyzeResume(file?: File, category?: string): Promise<Ana
     resumeText = "";
   }
 
-  const { extractRoleFit, formatRoleCategory } = await import("@/lib/role-fit");
-  const fit = extractRoleFit(resumeText, category);
+  if (!resumeText.trim()) throw new Error("We couldn’t read text from this PDF. Please try a text-based PDF.");
 
-  return {
-    ...mockAnalysis,
-    roleFit: fit
-      ? {
-          score: fit.score,
-          coverage: fit.coverage,
-          category: formatRoleCategory(category),
-        }
-      : undefined,
-  };
+  const response = await fetch("/api/analyze", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ resumeText, category, fileName: file.name }),
+  });
+  if (!response.ok) {
+    const body = await response.json().catch(() => null);
+    throw new Error(body?.error ?? "Resume analysis failed. Please try again.");
+  }
+  return response.json() as Promise<AnalysisResult>;
 }

@@ -99,12 +99,19 @@ export function ResumeLensApp() {
             setProgressStep(step);
             await new Promise((resolve) => window.setTimeout(resolve, 650));
         }
-        const result = await analyzeResume(file, selectedRole);
-        setAnalysis(result);
-        setSelectedIssue(result.issues[0]);
-        setUploading(false);
-        setView("Analysis");
-        setTab("Overview");
+        try {
+            const result = await analyzeResume(file, selectedRole);
+            setAnalysis(result);
+            setSelectedIssue(result.issues[0]);
+            setView("Analysis");
+            setTab("Overview");
+        }
+        catch (error) {
+            setUploadError(error instanceof Error ? error.message : "Resume analysis failed. Please try again.");
+        }
+        finally {
+            setUploading(false);
+        }
     }
     function openResume(resume) {
         if (resume)
